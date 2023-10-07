@@ -1,0 +1,15 @@
+h1 {
+  color: blueviolet;
+}
+
+.large-text {
+  font-size: 2em;
+}
+.text {
+  text-align: center;
+  background-color: lightgreen !important;
+  list-style: none;
+}
+.text li {
+  list-style: none;
+}

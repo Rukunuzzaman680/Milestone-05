@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tour of DOM</title>
+  <link rel="stylesheet" href="styles/style.css">
+  <style>
+    .fruits-container li {
+      color: turquoise;
+    }
+
+    #fruits {
+      color: blue;
+    }
+
+    .populer {
+      color: green;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Welcome to my DOM</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque commodi quibusdam fuga facilis magnam, sint vero
+      beatae velit sit iusto ex autem odio impedit officia reiciendis repudiandae nisi, earum totam!</p>
+  </header>
+  <main id="main-container">
+    <section id="names" class="large-text">
+      <h1>My awsome DOM website</h1>
+      <ul>
+        <li class="dom">Rukon</li>
+        <li>Rony</li>
+        <li>Rukon</li>
+        <li>Ahmed</li>
+      </ul>
+    </section>
+    <section class="fruits-container">
+      <h1 id="fruits" class="some-fruits more option">Some fruits in bangladesh</h1>
+      <ul>
+        <li>apple</li>
+        <li>orange</li>
+        <li>mango</li>
+        <li>licu</li>
+      </ul>
+    </section>
+    <section id="places-container">
+      <h1 id="places">Many places in the Rangpur</h1>
+      <ul id="places-list">
+        <li class="popular">rajbari</li>
+        <li class="popular">cikly</li>
+        <li class="popular">bridge</li>
+        <li class="famous">zoo</li>
+      </ul>
+    </section>
+    <section id="product-container">
+      <ul id="product-list">
+        <li>computer</li>
+        <li>mobile</li>
+        <li>laptop</li>
+      </ul>
+    </section>
+  </main>
+
+  <script src="js/dom.js"></script>
+  <script src="js/styleInJs.js"></script>
+  <script src="js/append.js"></script>
+
+  <script>
+    const student = {
+      name: 'RONY',
+      ID: 11,
+      study: function (time) {
+        console.log(time, 'study kortece')
+      }
+    }
+    // console.log('adding html file')
+    // console.log(document.body)
+
+    const liCollection = document.getElementsByTagName('li');
+    // console.log(liCollection)
+    for (const li of liCollection) {
+      // console.log(li.innerText)
+    }
+    // option-1: getElementByTagName
+    const allHeading = document.getElementsByTagName('h1')
+    for (const h1 of allHeading) {
+      // console.log(h1.innerText)
+    }
+
+    // option-2: getElementById
+    // change information in HTML
+    const fruits = document.getElementById('fruits')
+    // fruits.innerText = 'Most popular fruits in BD'
+
+    // option-3: getElementsByClass
+    const places = document.getElementsByClassName('popular')
+    for (const place of places) {
+      // console.log(place.innerText)
+    }
+
+    const famous = document.getElementsByClassName('famous')
+    for (const most of famous) {
+      // console.log(most.innerText)
+
+    }
+
+
+    // option-4: querySelectorALL
+    // query selector all
+    const someLi = document.querySelectorAll('.fruits-container')
+    // console.log(someLi)
+    for (const li of someLi) {
+      // console.log(li.innerText)
+    }
+
+    // option-5: querySelector
+    // query selector
+    const manyLi = document.querySelector('.fruits-container li');
+    // console.log(manyLi)
+
+    // change style of elements = id/class
+    document.getElementById('places').style.backgroundColor = 'none'
+
+    document.getElementsByClassName('popular')[2].style.backgroundColor = 'none'
+
+    // add and remove class
+    const title = document.getElementById('fruits')
+    title.classList
+    title.classList.add('more-add')
+
+    const title1 = document.getElementById('fruits')
+    title1.classList
+    title1.classList.remove('more')
+
+
+
+
+
+  </script>
+
+</body>
+
+</html>
